@@ -22,7 +22,30 @@ function Container2(props){
     </>
 }
 
+function ButtonTest(props){
+    function MissedGoal(){
+
+        return <h2>You Missed Goal</h2>
+    }
+    function MadeGoal(){
+        return <h2>You made a Goal</h2>
+    }
+    const goalStatus = props.goalStatus
+
+    return (
+
+        // returning as a ternary operator
+        <>
+            {goalStatus ? <MadeGoal/> :<MissedGoal/>}
+        </>
+    )
+
+
+
+}
+
 export {
     Container,
-    Container2
+    Container2,
+    ButtonTest
 }
